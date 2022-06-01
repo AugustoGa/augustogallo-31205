@@ -1,10 +1,11 @@
 import React from "react";
+import CartWidget from "./CartWidget";
 const NavBar = () => {
     return(
-        <div>
+        <div className="mydiv">
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid nav-container">
-                    <a className="navbar-brand" href="./index.html"><img src="./Welder..jpg"/></a>
+                    
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -26,6 +27,9 @@ const NavBar = () => {
                             <li className="nav-item">
                                 <a className="nav-link" href="./Paginas/Contacto.html">Contacto</a>
                             </li>
+                            <button>
+                                <CartWidget items={0}/>
+                            </button>
                         </ul>
                     </div>
                 </div>
@@ -33,5 +37,4 @@ const NavBar = () => {
         </div>
     );
 }
-
 export default NavBar;
